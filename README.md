@@ -68,7 +68,7 @@ This machine contains the rust-lang.org wildcard TLS cert.
 
 # Buildbot
 
-We have a decently customized buildbot environment, the [source of whbich](https://github.com/rust-lang/rust-buildbot) is open. It has been developed incrementally and haphazardly over years. Due to that and the somewhat complex nature of buildbot the program logic can take a while to grasp.
+We have a decently customized buildbot environment, the [source of which](https://github.com/rust-lang/rust-buildbot) is open. It has been developed incrementally and haphazardly over years. Due to that and the somewhat complex nature of buildbot the program logic can take a while to grasp.
 
 We run buildbot in two environments: 'prod' and 'dev'. The dev environent tends to only get used for developing 'significant' changes to rust-buildbot and it often lags behind the prod environment.
 
@@ -97,6 +97,8 @@ The build master contains an s3cmd configured so that - when necessary - people 
 The rustbuild user runs a number of cronjobs.
 
 The build master contains critical secrets, including the GPG subkey for signing releases and an s3 access token.
+
+Don't try to restart buildbot by running `buildbot restart`. Because EC2 slaves can take a long time to shut down (and sometimes never halt due to buildbot bugs), the restart will almost always timeout. Instead `buildbot stop`, then `ps -A | grep buildbot` until you see the process go away, then `buildbot start` (ikr?). These commands are always in the bash history.
 
 ## Important files
 
