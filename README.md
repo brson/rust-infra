@@ -98,8 +98,6 @@ The rustbuild user runs a number of cronjobs.
 
 The build master contains critical secrets, including the GPG subkey for signing releases and an s3 access token.
 
-Don't try to restart buildbot by running `buildbot restart`. Because EC2 slaves can take a long time to shut down (and sometimes never halt due to buildbot bugs), the restart will almost always timeout. Instead `buildbot stop`, then `ps -A | grep buildbot` until you see the process go away, then `buildbot start` (ikr?). These commands are always in the bash history.
-
 ## Important files
 
 * ~/rust-buildbot/master/master.cfg - The buildbot script. It's python - buildbot convention uses the .cfg extension though.
