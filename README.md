@@ -25,7 +25,7 @@ You'll inevitably need access to the Mozilla network from outside the office. Yo
 
 I suggest turning on 2-factor authentication on GitHub.
 
-As somebody responsible for Rust infrastructure you are going to have access to a lot of secrets which, if compromised, could result in major damage to the project. Please take steps to secure them. Personally I keep my stuff on a secure [Wuala](https://www.wuala.com) drive then further encrypted with [encfs](https://vgough.github.io/encfs/) (though note that encfs is unmaintained and has known security issues - it is not sufficient on its own and there are probably better solutions now). If you can, don't permanently decrypt the GPG messages you receive containing secrets - just run gpg again every time you need access.
+As somebody responsible for Rust infrastructure you are going to have access to secrets which, if compromised, could result in significant damage to the project. Please take steps to secure them. Personally I keep my stuff on a secure [Wuala](https://www.wuala.com) drive then further encrypted with [encfs](https://vgough.github.io/encfs/) (though note that encfs is unmaintained and has known security issues - it is not sufficient on its own and there are probably better solutions now). If you can, don't permanently decrypt the GPG messages you receive containing secrets - just run gpg again every time you need access.
 
 Put a password on your GPG key.
 
