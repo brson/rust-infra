@@ -86,7 +86,7 @@ The production build master is located at the public IP 54.241.248.193 and has t
 
 The build master is mostly operated by the 'rustbuild' user. To access, ssh from the bastion to `rustbuild@10.190.147.69` (the private IP).
 
-Don't bother trying to `buildbot restart master` - the slave shutdown takes a long time and the restart will time out. When shutting down with `buildbot stop master`, make sure you wait until buildbot actually exits (it takes a long time to wait on the EC2 slaves).
+Don't bother trying to `buildbot restart master` - the slave shutdown takes a long time and the restart will time out. When shutting down with `buildbot stop master`, make sure you wait until buildbot actually exits (it takes a long time to wait on the EC2 slaves) before starting again.
 
 Buildbot listens *locally* on port 8010 via HTTP, and Homu on port 7942. A logal nginx instance is configured via `/etc/nginx/available-sites/default` to proxy them both to port 80.
 
