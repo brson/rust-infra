@@ -10,7 +10,7 @@
 * [Automation metabug](https://github.com/rust-lang/rust/issues/17356). The evergrowing list of things to do.
 * [rust-admin](https://github.com/brson/rust-admin). Old information, sometimes still worth looking at. This repo is private because it contains secrets.
 * [AWS console](https://console.aws.amazon.com/console/). Login page for AWS.
-* [play.rust-lang.org](https://play.rust-lang.org/). Our online Rust evaluator. It has a cross-site API so that it can be used by other projects, e.g. rust-by-example let's all examples be evaluated on play.rlo.
+* [play.rust-lang.org](https://play.rust-lang.org/). Our online Rust evaluator. It has a cross-site API so that it can be used by other projects, e.g. rust-by-example lets all examples be evaluated on play.rlo.
 * [rustup.sh](http://github.com/rust-lang/rustup). A script commonly used to download the compiler from release channels. It interprets the metadata uploaded by the distribution builders.
 * [rust-packaging](https://github.com/rust-lang/rust-packaging) - The script run by the 'dist-packaging' builders to produce the final Rust builds in a variety of packaging formats.
 * [playpen](https://github.com/rust-lang/rust-playpen) - The code that runs play.rust-lang.org.
@@ -68,7 +68,7 @@ This machine contains the rust-lang.org wildcard TLS cert.
 
 # Buildbot
 
-We have a decently customized buildbot environment, the [source of wich](https://github.com/rust-lang/rust-buildbot) is open. It has been developed incrementally and haphazardly over years. Due to that and the somewhat complex nature of buildbot the program logic can take a while to grasp.
+We have a decently customized buildbot environment, the [source of whbich](https://github.com/rust-lang/rust-buildbot) is open. It has been developed incrementally and haphazardly over years. Due to that and the somewhat complex nature of buildbot the program logic can take a while to grasp.
 
 We run buildbot in two environments: 'prod' and 'dev'. The dev environent tends to only get used for developing 'significant' changes to rust-buildbot and it often lags behind the prod environment.
 
