@@ -154,7 +154,10 @@ TODO
 
 # crates.io
 
-crates.io runs on Heroku. TODO.
+[crates.io](https://github.com/rust-lang/crates.io) runs on Heroku.  It has 2 web dynos and 1 worker dyno, and is under the `mozillacorporation` organization. Heroku outages that might affect crates.io are listed [here](https://status.heroku.com/).
+
+DNS for crates.io is hoted by [Zerigo](https://www.zerigo.com/managed-dns) because it supports ANAME records. The ANAME record is necessary to make SSL work on the apex domain (crates.io) with Heroku hosting. Zerigo was chosen because it's bundled with Heroku automatically. 
+
 
 # play.rust-lang.org
 
